@@ -33,8 +33,16 @@ public class OOPS {
             // b1.username="Snehal";
             // b1.setPassword("123456");
 
-            Fish shark=new Fish();
-            shark.eat();
+            // Fish shark=new Fish();
+            // shark.eat();
+
+            // Horse h = new Horse();
+            // h.eat();
+            // h.walk();
+            // System.out.println(h.color);
+
+            Queen q = new Queen();
+            q.moves();
             
 
             
@@ -112,20 +120,53 @@ public class OOPS {
 //     }
 // }
 //Base class
-class Animal{
-    String color;
-    void eat(){
-        System.out.println("Eating");
-    }
-    void breathe(){
-        System.out.println("Breathe");
+// class Animal{
+//     String color;
+//     void eat(){
+//         System.out.println("Eating");
+//     }
+//     void breathe(){
+//         System.out.println("Breathe");
+//     }
+// }
+// //Dervied class
+// class Fish extends Animal{
+//     int fins;
+//     void swim(){
+//         System.out.println("swim");
+//     }
+// }
+// abstract class Animal{
+//     String color;
+//     Animal(){
+//         color="brown";
+
+//     }
+//     void eat(){
+//         System.out.println("Eating");
+//     }
+//     abstract void walk();
+// }
+// class Horse extends Animal{
+//     void changeColor(){
+//         color="dark brown";
+//     }
+//     void walk(){
+//         System.out.println("walk");
+
+// }
+// }
+interface ChessPlayer{
+    void moves();
+}
+class Queen implements ChessPlayer{
+    public void moves(){
+        System.out.println("up down left right");
     }
 }
-//Dervied class
-class Fish extends Animal{
-    int fins;
-    void swim(){
-        System.out.println("swim");
+class Rook implements ChessPlayer{
+    public void moves(){
+        System.out.println("left right");
     }
 }
 
